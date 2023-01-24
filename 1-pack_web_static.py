@@ -8,11 +8,11 @@ from fabric.api import local
 def do_pack():
     """Create archive of the content of web_static"""
     dt = datetime.utcnow()
-    arc_file = "versions/web_static_{}{}{}{}{}{}.tgz".format(dt.year,
-                                                         dt.month,
-                                                         dt.day,
-                                                         dt.hour,
-                                                         dt.minute,
+    arc_file = "versions/web_static_{}{}{}{}{}{}.tgz".format(dt.year, \
+                                                         dt.month, \
+                                                         dt.day, \
+                                                         dt.hour, \
+                                                         dt.minute, \
                                                          dt.second)
     if os.path.isdir("versions") is False:
         if local("mkdir -p versions").failed is True:
