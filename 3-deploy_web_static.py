@@ -8,13 +8,13 @@ env.hosts = ["104.196.168.90", "35.196.46.172"]
 
 
 def do_pack():
-    """Create a tar gzipped archive of the directory web_static."""
+    """Create archive file of contents of web_static"""
     dt = datetime.utcnow()
-    file = "versions/web_static_{}{}{}{}{}{}.tgz".format(dt.year,
-                                                         dt.month,
-                                                         dt.day,
-                                                         dt.hour,
-                                                         dt.minute,
+    file = "versions/web_static_{}{}{}{}{}{}.tgz".format(dt.year,\
+                                                         dt.month,\
+                                                         dt.day,\
+                                                         dt.hour,\
+                                                         dt.minute,\
                                                          dt.second)
     if os.path.isdir("versions") is False:
         if local("mkdir -p versions").failed is True:
