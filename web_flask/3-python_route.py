@@ -24,6 +24,7 @@ def describ_c(text):
     return 'C %s' % text.replace('_', ' ')
 
 
+@app.route('/python', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def describe_python(text='is cool'):
     """Display 'Python' followed by the values the text varaible"""
